@@ -189,9 +189,6 @@ const onUpdate = (e) => {
 
     swal("success", "Movie Updated");
 
-    // addBtn.classList.remove("d-none");
-    // updateBtn.classList.add("d-none");
-    movieForm.reset();
 }
 
 const onRemove = (e) => {

@@ -148,7 +148,7 @@ const onToggle = () => {
     backdrop.classList.toggle("d-none");
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
-    movieForm.reset();
+    
 }
 
 const onEdit = (e) => {

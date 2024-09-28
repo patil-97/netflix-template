@@ -1,0 +1,178 @@
+:root {
+  --pri-clr: #e50914;
+  --sec-clr: #0f0f0f;
+  --clr-white: #fff;
+}
+
+body {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../images/netflix.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+a {
+  display: inline-block;
+  width: 150px;
+}
+
+.btn.btn-danger {
+  background-color: var(--pri-clr);
+  float: right;
+}
+
+.float-right {
+  float: right;
+  cursor: pointer;
+}
+
+/* ! Movie IMage and Card */
+.movieImg img {
+  object-fit: cover;
+  height: 450px;
+  width:100%;
+  position: relative;
+  background-position: center;
+}
+
+.imgCard.card {
+  /* height: 450px; */
+  overflow: hidden;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.imgCard.imgCard.card:hover{
+  transform:translateY(-10px);
+  box-shadow:-8px 8px 10px  black;
+}
+
+.head-rating {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background-color:rgb(0, 0, 0,0.4);
+  padding:5px;
+  backdrop-filter: blur(5px);
+}
+
+.head-rating h3 {
+  font-size: 2rem;
+}
+
+.head-rating strong{
+  font-size:2rem;
+}
+
+.overview {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding:10px;
+  text-align: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  backdrop-filter:blur(10px);
+  opacity:0;
+  transition: all 0.4s ease-in-out;
+  color:#fff;
+}
+
+.imgCard.card:hover .overview{
+  opacity:1;
+}
+
+.icons{
+  width:100%;
+  position:absolute;
+  top:0;
+  display:flex;
+  justify-content: space-between;
+  padding:10px;
+}
+
+.icons i{
+  cursor:pointer;
+}
+
+.icons :nth-child(2){
+  color: var(--pri-clr)
+}
+
+/* ! ADD and UPdate button  */
+
+#updateBtn,
+#addBtn {
+  background-color: var(--sec-clr);
+  border:none;
+}
+
+
+/* ! BackDrop  */
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  animation: fadeIn 0.3s ease-in-out 1;
+  cursor: pointer;
+}
+
+/* ! MovieCardForm  */
+
+.formCard {
+  position: fixed;
+  top: 0;
+  width: 60%;
+  left: 20%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(50px);
+  color: white;
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* ! Media Query  */
+
+@media all and (max-width: 700px) {
+  .formCard {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+/* ! KeyFrames  */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-500px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

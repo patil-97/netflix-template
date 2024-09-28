@@ -123,6 +123,8 @@ function swal (icon, title) {
 }
 
 const onMovieAdd = (e) => {
+
+
     e.preventDefault();
     let newMovie = {
         title: titleControl.value,
@@ -131,7 +133,7 @@ const onMovieAdd = (e) => {
         rating: ratingControl.value,
         id: uid()
     }
-
+    
     arr.unshift(newMovie);
     toLocalStorage(arr);
     const col = document.createElement("div");
@@ -148,6 +150,8 @@ const onToggle = () => {
     backdrop.classList.toggle("d-none");
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
+    if(!movieForm.className.includes("d-none")) movieForm.reset();
+
     
 }
 
@@ -188,7 +192,7 @@ const onUpdate = (e) => {
     toLocalStorage(arr);
 
     swal("success", "Movie Updated");
-
+    movieForm.reset();
 }
 
 const onRemove = (e) => {

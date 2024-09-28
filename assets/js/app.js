@@ -148,6 +148,7 @@ const onToggle = () => {
     backdrop.classList.toggle("d-none");
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
+    movieForm.reset();
 }
 
 const onEdit = (e) => {
@@ -165,7 +166,6 @@ const onEdit = (e) => {
     urlControl.value = ele.url;
     overviewControl.value = ele.overview;
     ratingControl.value = ele.rating;
-
 
 }
 

@@ -191,6 +191,7 @@ const onUpdate = (e) => {
 
     // addBtn.classList.remove("d-none");
     // updateBtn.classList.add("d-none");
+    movieForm.reset();
 }
 
 const onRemove = (e) => {

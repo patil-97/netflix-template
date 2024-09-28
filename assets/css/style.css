@@ -101,6 +101,8 @@ a {
   display:flex;
   justify-content: space-between;
   padding:10px;
+  left:0;
+  right:0;
 }
 
 .icons i{

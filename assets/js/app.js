@@ -85,12 +85,13 @@ const movieCardCreator = (obj) => {
                             <p>
                             ${obj.overview}
                             </p>
+                            <div class="icons">
+                                <i class="fa-solid fa-pen-to-square fa-2x" onClick = onEdit(this)></i>
+                                <i class="fa-solid fa-trash-can fa-2x " onClick = onRemove(this)></i>
+                            </div>
                         </div>
                         </figcaption>
-                        <div class="icons">
-                            <i class="fa-solid fa-pen-to-square fa-2x" onClick = onEdit(this)></i>
-                            <i class="fa-solid fa-trash-can fa-2x " onClick = onRemove(this)></i>
-                        </div>
+                       
                     </figure>
                     </div>
                 `;

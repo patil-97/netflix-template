@@ -143,6 +143,7 @@ const onMovieAdd = (e) => {
     e.target.reset();
 
     swal("success", "Movie Added Successfully!!!")
+    onToggle();
 }
 
 const onToggle = () => {
@@ -150,9 +151,10 @@ const onToggle = () => {
     backdrop.classList.toggle("d-none");
     updateBtn.classList.add("d-none");
     addBtn.classList.remove("d-none");
-    if(!movieForm.className.includes("d-none")) movieForm.reset();
+    if(!movieForm.className.includes("d-none")){
+         movieForm.reset();
+    }
 
-    
 }
 
 const onEdit = (e) => {
